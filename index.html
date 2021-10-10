@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generate Bubbles</title>
+</head>
+<body>
+    <div id="bubble">
+        <span id="bub"></span>
+    </div>
+   <script type="text/javascript">
+function createBubble(){
+let bubble = document.getElementById('bubble')
+let create = document.createElement('span')
+let size = Math.random()* 60;
+create.className = 'bub'
+    create.style.width =20 + size + 'px';
+    create.style.height = 20 + size + 'px';
+    create.style.left = Math.random() * innerWidth + "px";
+    bubble.appendChild(create);
+
+
+setTimeout(() => {
+    create.remove();
+} , 4000)
+
+}
+setInterval(createBubble , 50)
+
+
+
+   </script> 
+</body>
+</html>
